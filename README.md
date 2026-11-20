@@ -1,10 +1,12 @@
 # viewport-qa
 
-Numeric layout QA for web pages across viewport widths, from 390 to 3840.
+Responsive design testing with numbers: layout QA for web pages across viewport widths, from 390 to 3840.
 
 [![npm version](https://img.shields.io/npm/v/viewport-qa)](https://www.npmjs.com/package/viewport-qa)
 [![license](https://img.shields.io/npm/l/viewport-qa)](https://www.npmjs.com/package/viewport-qa)
 [![node](https://img.shields.io/node/v/viewport-qa)](https://www.npmjs.com/package/viewport-qa)
+
+Guide, examples and FAQ: https://oss.saimulislam.com/viewport-qa/
 
 viewport-qa loads a page in Chromium at each viewport width and measures the layout: horizontal overflow, clipped text, elements off-screen, images shown above their resolution, repeated images, layout shift, edge-touching bands, inconsistent insets and radii, and orphan grid rows. Every finding comes with a check id, a severity, a selector, the width and the numbers that triggered it. axe and Lighthouse check accessibility and performance, and visual-regression tools compare screenshots; none of them measures whether a layout stays consistent from phone to 4K.
 

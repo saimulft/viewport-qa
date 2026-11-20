@@ -1,8 +1,14 @@
 {
   "name": "viewport-qa",
-  "version": "0.1.0",
-  "description": "Numeric layout QA for web pages across viewport widths: overflow, clipping, inconsistent insets and radii, low-resolution images and layout shift.",
+  "version": "0.1.1",
+  "description": "Responsive design testing CLI: measures overflow, clipping, layout shift and image resolution in Chromium at widths from 390 to 3840.",
   "keywords": [
+    "responsive design testing",
+    "responsive testing tool",
+    "test website on different screen sizes",
+    "playwright responsive testing",
+    "cumulative layout shift",
+    "visual regression testing",
     "layout",
     "qa",
     "responsive",
@@ -11,10 +17,9 @@
     "overflow",
     "layout-shift",
     "css",
-    "testing",
     "design-qa"
   ],
-  "homepage": "https://github.com/saimulft/viewport-qa#readme",
+  "homepage": "https://oss.saimulislam.com/viewport-qa/",
   "bugs": {
     "url": "https://github.com/saimulft/viewport-qa/issues"
   },
