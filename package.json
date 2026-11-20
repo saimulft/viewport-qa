@@ -26,7 +26,7 @@
   "author": "Saimul Islam (https://github.com/saimulft)",
   "type": "module",
   "bin": {
-    "viewport-qa": "./dist/cli.js"
+    "viewport-qa": "dist/cli.js"
   },
   "exports": {
     ".": {
