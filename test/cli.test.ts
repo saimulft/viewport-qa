@@ -18,11 +18,12 @@ interface Outcome {
 
 /** Runs the CLI from source, the way a user would run the built file. */
 function cli(args: string[]): Promise<Outcome> {
+  // node --test sets FORCE_COLOR when it prints to a colour terminal, and Node warns on stderr
+  // when FORCE_COLOR and NO_COLOR are both set, so the child gets NO_COLOR alone.
+  const env: Record<string, string | undefined> = { ...process.env, NO_COLOR: '1' };
+  delete env.FORCE_COLOR;
   return new Promise((done, reject) => {
-    const child = spawn(process.execPath, ['src/cli.ts', ...args], {
-      cwd: ROOT,
-      env: { ...process.env, NO_COLOR: '1' },
-    });
+    const child = spawn(process.execPath, ['src/cli.ts', ...args], { cwd: ROOT, env });
     let stdout = '';
     let stderr = '';
     child.stdout.setEncoding('utf8').on('data', (chunk: string) => (stdout += chunk));
