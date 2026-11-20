@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clipped text</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="fixed-height" style="height: 48px; overflow: hidden">
+        <p>
+          This paragraph is much longer than the box that holds it, so most of it is cut off by the fixed height of its
+          parent and the reader never sees the end of the sentence that this text is making.
+        </p>
+      </div>
+      <h3 id="nowrap" style="width: 150px; white-space: nowrap; overflow: hidden">
+        A heading far too long for its box
+      </h3>
+      <h3 id="ellipsis" style="width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">
+        A heading far too long for its box
+      </h3>
+      <p
+        id="clamp"
+        style="
+          width: 200px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        "
+      >
+        This text is clamped to two lines on purpose, so the rest of the sentence is hidden by design and not by
+        mistake, however long it runs.
+      </p>
+      <div id="slider" style="overflow: hidden; white-space: nowrap">
+        <a href="#one" style="display: inline-block; width: 300px">Slide one</a>
+        <a href="#two" style="display: inline-block; width: 300px">Slide two</a>
+        <a href="#three" style="display: inline-block; width: 300px">Slide three</a>
+        <a href="#four" style="display: inline-block; width: 300px">Slide four</a>
+      </div>
+    </main>
+  </body>
+</html>

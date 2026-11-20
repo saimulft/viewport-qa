@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Images</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img
+        id="ok"
+        src="photo-a.png"
+        width="2400"
+        height="800"
+        alt=""
+        style="display: block; width: 100%; height: auto"
+      />
+      <img
+        id="lowres"
+        src="small-200.png"
+        width="200"
+        height="100"
+        alt=""
+        style="display: block; width: 100%; height: auto"
+      />
+      <img
+        id="density"
+        src="d-1x.png"
+        srcset="d-1x.png 1x, d-2x.png 2x"
+        alt=""
+        style="display: block; width: 500px; max-width: 100%; height: auto"
+      />
+      <img
+        id="widths"
+        src="w-200.png"
+        srcset="w-200.png 200w, w-600.png 600w"
+        sizes="500px"
+        alt=""
+        style="display: block; width: 500px; max-width: 100%; height: auto"
+      />
+      <img id="broken" src="missing.png" alt="" style="display: block; width: 200px; height: 100px" />
+      <img id="rep1" src="shared-300.png" alt="" style="display: block; width: 150px; height: auto" />
+      <img id="rep2" src="shared-300.png" alt="" style="display: block; width: 150px; height: auto" />
+    </main>
+  </body>
+</html>

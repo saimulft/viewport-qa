@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>House rules</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container bar">
+        <a class="logo" href="/">
+          <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <circle cx="14" cy="14" r="12" fill="#1a1a1a" />
+          </svg>
+          Acme
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <h2 id="misaligned" style="margin-left: 40px">Heading that misses the logo edge</h2>
+        <button id="no-pointer" type="button" style="cursor: default">Press</button>
+        <select id="native-select" aria-label="Plan">
+          <option>Free</option>
+          <option>Pro</option>
+        </select>
+        <input id="native-date" type="date" aria-label="Start date" />
+      </section>
+      <section id="dark" style="background: #111; padding: 32px 24px">
+        <p id="orange" style="color: #ff7a00">Orange copy on a dark ground</p>
+        <a id="red-icon" href="#a">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 12h20" stroke="#e11d48" fill="none" stroke-width="2" />
+          </svg>
+        </a>
+        <a id="white-icon" href="#b">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 12h20" stroke="#fff" fill="none" stroke-width="2" />
+          </svg>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Layout shift</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="late" style="height: 0"></div>
+      <div style="height: 400px; background: #dbeafe; padding: 16px">
+        <h1>Content that gets pushed down</h1>
+        <p>A banner is inserted above this block shortly after load.</p>
+      </div>
+    </main>
+    <script>
+      // Wait for two painted frames after load so the shift counts, then push the content down.
+      window.addEventListener('load', function () {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            setTimeout(function () {
+              document.getElementById('late').style.height = '300px';
+            }, 100);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

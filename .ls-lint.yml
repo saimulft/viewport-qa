@@ -1,0 +1,11 @@
+# File and folder names: lowercase kebab-case. Upper-case docs (README.md, CHANGELOG.md) are allowed.
+ls:
+  .dir: kebab-case
+  .*: kebab-case
+  .md: kebab-case | screamingsnakecase
+
+ignore:
+  - .git
+  - .claude
+  - node_modules
+  - dist

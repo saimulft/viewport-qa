@@ -1,0 +1,72 @@
+{
+  "name": "viewport-qa",
+  "version": "0.1.0",
+  "description": "Numeric layout QA for web pages across viewport widths: overflow, clipping, inconsistent insets and radii, low-resolution images and layout shift.",
+  "keywords": [
+    "layout",
+    "qa",
+    "responsive",
+    "viewport",
+    "playwright",
+    "overflow",
+    "layout-shift",
+    "css",
+    "testing",
+    "design-qa"
+  ],
+  "homepage": "https://github.com/saimulft/viewport-qa#readme",
+  "bugs": {
+    "url": "https://github.com/saimulft/viewport-qa/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saimulft/viewport-qa.git"
+  },
+  "license": "MIT",
+  "author": "Saimul Islam (https://github.com/saimulft)",
+  "type": "module",
+  "bin": {
+    "viewport-qa": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "lint": "eslint . && npm run lint:names",
+    "lint:names": "ls-lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "peerDependencies": {
+    "playwright": ">=1.40.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@ls-lint/ls-lint": "^2.3.2",
+    "@types/node": "^20.19.43",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "playwright": "~1.63.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0"
+  }
+}
