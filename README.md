@@ -1,14 +1,43 @@
-# viewport-qa
+<h1 align="center">viewport-qa</h1>
 
-Responsive design testing with numbers: layout QA for web pages across viewport widths, from 390 to 3840.
+<p align="center">
+  Responsive design testing with numbers: layout QA for web pages across viewport widths, from 390 to 3840.
+</p>
 
-[![npm version](https://img.shields.io/npm/v/viewport-qa)](https://www.npmjs.com/package/viewport-qa)
-[![license](https://img.shields.io/npm/l/viewport-qa)](https://www.npmjs.com/package/viewport-qa)
-[![node](https://img.shields.io/node/v/viewport-qa)](https://www.npmjs.com/package/viewport-qa)
+<p align="center">
+  <a href="https://www.npmjs.com/package/viewport-qa"><img alt="npm version" src="https://img.shields.io/npm/v/viewport-qa" /></a>
+  <a href="https://www.npmjs.com/package/viewport-qa"><img alt="license" src="https://img.shields.io/npm/l/viewport-qa" /></a>
+  <a href="https://www.npmjs.com/package/viewport-qa"><img alt="node" src="https://img.shields.io/node/v/viewport-qa" /></a>
+</p>
 
-Guide, examples and FAQ: https://oss.saimulislam.com/viewport-qa/
+<p align="center">
+  <a href="https://oss.saimulislam.com/viewport-qa/">Guide, examples and FAQ</a> ·
+  <a href="https://www.npmjs.com/package/viewport-qa">npm</a> ·
+  <a href="https://github.com/saimulft/viewport-qa">GitHub</a> ·
+  <a href="https://github.com/saimulft/viewport-qa/blob/main/CHANGELOG.md">Changelog</a>
+</p>
+
+<p align="center">
+  <a href="https://oss.saimulislam.com/viewport-qa/">
+  <img alt="One page at two widths: at 390 px a 900 px block runs 534 px past the viewport edge with one error and two warnings, at 1440 px the same block fits and there are no problems" src="https://oss.saimulislam.com/shots/viewport-qa/widths.webp" width="880" />
+  </a>
+</p>
+
+<p align="center">
+  <b>One page, two widths.</b> At 390 px the page scrolls sideways; at 1440 px it is fine. viewport-qa measures every width you give it and names the element at fault.
+</p>
 
 viewport-qa loads a page in Chromium at each viewport width and measures the layout: horizontal overflow, clipped text, elements off-screen, images shown above their resolution, repeated images, layout shift, edge-touching bands, inconsistent insets and radii, and orphan grid rows. Every finding comes with a check id, a severity, a selector, the width and the numbers that triggered it. axe and Lighthouse check accessibility and performance, and visual-regression tools compare screenshots; none of them measures whether a layout stays consistent from phone to 4K.
+
+## See it work
+
+### The report
+
+Each finding names the rule, the selector and the measurement.
+
+<img alt="viewport-qa in a terminal: at 390 by 844 one horizontal-overflow error and two warnings for div.wide, at 1440 by 900 no problems" src="https://oss.saimulislam.com/shots/viewport-qa/run.webp" width="880" />
+
+More examples and the FAQ are on the [guide](https://oss.saimulislam.com/viewport-qa/).
 
 ## Install
 

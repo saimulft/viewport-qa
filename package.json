@@ -1,6 +1,6 @@
 {
   "name": "viewport-qa",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Responsive design testing CLI: measures overflow, clipping, layout shift and image resolution in Chromium at widths from 390 to 3840.",
   "keywords": [
     "responsive design testing",

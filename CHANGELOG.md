@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- The README is now a visual tour: a picture of the package at work, the guide, npm, GitHub and changelog links, and a See it work section. No code changes.
+
 ## 0.1.1
 
 - Clearer npm description and keywords, and a homepage with a guide, examples and FAQ: https://oss.saimulislam.com/viewport-qa/
